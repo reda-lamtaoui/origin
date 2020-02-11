@@ -15,6 +15,8 @@ class AlterAppartientForeignKey extends Migration
     {
         Schema::table('appartientPromotions', function (Blueprint $table) {
             $table->foreign('etudiantId')->references('etudiantId')->on('etudiants');
+
+            
             $table->foreign('promotionId')->references('promotionId')->on('promotions');
         });
     }
